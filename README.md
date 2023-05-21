@@ -4,11 +4,12 @@ This is a webpage that takes you on a fascinating journey through the rich histo
 
 ## Features
 
-- **Timeline of Events:** Explore a comprehensive timeline that spans several centuries, showcasing the key construction phases, major expansions, and significant historical events associated with the Great Wall. Delve into the dynasties, rulers, and milestones that shaped its development.
+- **Timeline of Events:** Explore a comprehensive timeline that spans several centuries, showcasing the key construction phases, major expansions, and significant historical events associated with the Great Wall. Delve into the dynasties, rulers, and milestones that shaped its development. ![image](https://github.com/Greg-GJE/hist-fact/assets/130982904/9c7e2940-b651-4452-a679-da9c9c700b80)
 
-- **Evidence-based Information:** Dive into a wealth of evidence-based information backed by historical records, archaeological findings, and scholarly research. Gain insights into the purpose, construction techniques, defensive strategies, and the impact the Great Wall had on ancient China's military defense and cultural identity.
 
-- **Visual Gallery:** Immerse yourself in a captivating visual gallery featuring stunning images and videos that support the historical facts and showcase the grandeur of the Great Wall. Experience the scale and beauty of this architectural marvel firsthand.
+- **Evidence-based Information:** Dive into a wealth of evidence-based information backed by historical records, archaeological findings, and scholarly research. Gain insights into the purpose, construction techniques, defensive strategies, and the impact the Great Wall had on ancient China's military defense and cultural identity. ![image](https://github.com/Greg-GJE/hist-fact/assets/130982904/640258f5-fb1a-4e7e-88b2-7a31220eac69)
+
+- **Visual Gallery:** Immerse yourself in a captivating visual gallery featuring stunning images and videos that support the historical facts and showcase the grandeur of the Great Wall. Experience the scale and beauty of this architectural marvel firsthand. - ![image](https://github.com/Greg-GJE/hist-fact/assets/130982904/3c0eb798-ac71-4570-a0f2-33a16088ba87)
 
 ## Installation and Deployment
 
