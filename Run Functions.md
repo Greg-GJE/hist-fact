@@ -1,5 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 Welcome,
 
 This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
@@ -10,8 +8,7 @@ You can safely delete this README.md file, or change it for your own project. Pl
 
 To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
-
+git
 A button should appear to click: _Open Preview_ or _Open Browser_.
 
 To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
