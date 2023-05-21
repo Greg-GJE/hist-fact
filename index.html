@@ -14,6 +14,7 @@
             z-index: 1;
             height: 320px;
             width: 480px;
+            margin: auto;
         }
 
         /* (the vertical ruler) */
@@ -147,21 +148,21 @@
 
         .container10 {
         width: 60%;
-        margin: 2rem auto; 
+        margin: 2rem auto;
         }
 
         .gallery {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(8, 5vw);
-        grid-gap: 1.5rem; 
+        grid-gap: 1.5rem;
         }
 
         .gallery__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block; 
+        display: block;
         }
 
         .gallery__item--1 {
@@ -229,18 +230,14 @@
         /* grid-column: 5 / span 4; */
         /* grid-row: 6 / span 3; */
         }
+
     </style>
 
 </head>
 
 <body>
     <header>
-        <!--br><br>
-        <h1 style="text-align: center;">Hist-Fact: The Great Wall of China</h1>
-        <br>
-        <img src="assets/img/china wall.jpg" alt="Illustration of the Great Wall of China" class="center"-->
-    </header>
-
+    
     <nav>
 
         <nav class="navbar">
@@ -248,14 +245,14 @@
             <div class="logo"><b>Hist-Fact: The Great Wall Of China</b></div>
 
             <!-- NAVIGATION MENU -->
-            <ul class="nav-links">
+            <div class="nav-links">
 
                 <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" />
+                <input type="checkbox" id="checkbox_toggle" >
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
                 <!-- NAVIGATION MENUS -->
-                <div class="menu">
+                <ul class="menu">
 
                     <li><a href="#introduction">Home</a></li>
                     <li><a href="#timeline">Timeline</a></li>
@@ -273,22 +270,25 @@
 
                     </li>
 
-                    <li><a href="photosvideos">Media</a></li>
-                </div>
+                    <li><a href="#photosvideos">Media</a></li>
+                </ul>
 
-            </ul>
+            </div>
         </nav>
+
+    </nav>
+
+    </header>
 
         <main>
             <br><br>
             <section id="introduction">
-                <h2></h2>
                 <br><br>
 
                 <div class="container1">
-                    <div class="image1">
-                        <img src="assets/img/china wall.jpg" alt="Illustration Of The Great Wall Of China"
-                            class="image1">
+                    <div class="image1_container">
+                        <img src="assets/img/china_wall.jpg" alt="Illustration Of The Great Wall Of China"
+                             class="image1">
                     </div>
                     <div class="text1">
                         <p>Did you know that the Great Wall of China, one of the world's most awe-inspiring structures,
@@ -321,6 +321,7 @@
 
             <br><br><br><br>
             <hr><br><br><br><br>
+            <!-- Attributes: https://www.w3schools.com/howto/howto_css_timeline.asp -->
             <section id="timeline">
                 <h2 style="text-align:center;">Timeline of Events</h2>
                 <br><br>
@@ -388,11 +389,11 @@
             <section id="evidence-info">
                 <h2 style="text-align:center">Evidence Based Information</h2>
                 <br><br>
-                <center>
+                <div class="center__text">
                     <h4 id="purpose" style="text-align:center;">- Purpose Of The Great Wall -</h4><br>
                     <div class="player">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/m68zyXyeYG0"
-                            title="YouTube video player" frameborder="0"
+                            title="YouTube video player" class="frameborder_zero"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
@@ -408,7 +409,7 @@
                     <h4 id="construction" style="text-align:center;">- Construction Techniques -</h4><br>
                     <div class="player">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Tka_a3jdSHQ"
-                            title="YouTube video player" frameborder="0"
+                            title="YouTube video player" class="frameborder_zero"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
@@ -425,7 +426,7 @@
                     <h4 id="defense" style="text-align:center;">- Defensive Strategies -</h4><br>
                     <div class="player">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/RmaVP1n3Ogk"
-                            title="YouTube video player" frameborder="0"
+                            title="YouTube video player" class="frameborder_zero"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
@@ -442,7 +443,7 @@
                     <h4 id="military" style="text-align:center;">- Impact on Military Defense -</h4><br>
                     <div class="player">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/i8aZdwNlSEI" title="YouTube video player"
-                        frameborder="0"
+                        class="frameborder_zero"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                     </div>
@@ -455,7 +456,7 @@
                     <h4 id="culture" style="text-align:center;">- Cultural Identity and Symbolism -</h4><br>
                     <div class="player">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/pVXINihe6I8" title="YouTube video player"
-                            frameborder="0"
+                            class="frameborder_zero"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
@@ -467,7 +468,7 @@
                     civilization.</p>
 
 
-                </center>
+                </div>
             </section>
 
 
@@ -480,32 +481,33 @@
             <div class="container10">
             <div class="gallery">
             <figure class="gallery__item gallery__item--1">
-            <img src="assets/img/20090529_Great_Wall_8185 (1).jpg" alt="Photo of the great wall of China" class="gallery__img">
+            <img src="assets/img/great_wall_drone_shot.webp" alt="Photo of the great wall of China" class="gallery__img">
             </figure>
             <figure class="gallery__item gallery__item--2">
-            <img src="assets/img/great-wall-1525124_1280 (1).jpg" alt="Photo of the great wall of China" class="gallery__img">
+            <img src="assets/img/great_wall_side.jpg" alt="Photo of the great wall of China" class="gallery__img">
             </figure>
             <figure class="gallery__item gallery__item--3">
-            <img src="assets/img/Map_of_the_Great_Wall_of_China (1).jpg" alt="Map of the great wall of China" class="gallery__img">
+            <img src="assets/img/great_wall_snowing.jpg" alt="Map of the great wall of China" class="gallery__img">
             </figure>
             <figure class="gallery__item gallery__item--4">
-            <img src="assets/img/snow-winter-mountain-cold-tourism-china (2).jpg" alt="Great Wall Of China Covered in Snow" class="gallery__img">
+            <img src="assets/img/great_wall_with_crowd.jpg" alt="Great Wall Of China Covered in Snow" class="gallery__img">
             </figure>
             <figure class="gallery__item gallery__item--5">
-                <img src="assets/img/a9600de8d0864cb3be1fe7a75e3a53c4.jpg" alt="Great Wall of China's photo" class="gallery__img">
+                <img src="assets/img/great_wall_with_money.jpg" alt="Great Wall of China's photo" class="gallery__img">
             </figure>
             <figure class="gallery__item gallery__item--6">
-                <img src="assets/img/main-qimg-da1261af3c09f541fa383cd20976dba5.webp" alt="Photo of the great wall of China" class="gallery__img">
+                <img src="assets/img/reat_wall_map.jpg" alt="Photo of the great wall of China" class="gallery__img">
             </figure>
             </div>
             </div>
 
-            <center><div class="player">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EotbKqZmBuY" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-            </div></center>
+            <div class="center__text">
+                <div class="player">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EotbKqZmBuY" title="YouTube video player"
+                        class="frameborder_zero"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div></div>
 
             </section>
 
@@ -515,10 +517,10 @@
         </main>
 
         <footer>
-            
-            <b>
-                <p class="footerright">&copy; 2023 | Hist-Fact: The Great Wall of China</p>
-            </b>
+
+            <div>
+                <p class="footerright"><b>&copy; 2023 | Hist-Fact: The Great Wall of China</b></p>
+            </div>
         </footer>
 </body>
 
