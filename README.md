@@ -21,7 +21,9 @@ Alternatively, you can access the live deployment on [GitHub Pages](https://greg
 
 ## Attribution
 
-The code for this project is original and written by the project owner except for a few CSS parts which too have been modified beyond identification.
+The code for this project is original and written by the project owner except for a few CSS parts which too have been modified beyond identification and this tutorial used to create the timeline:
+
+https://www.w3schools.com/howto/howto_css_timeline.asp
 
 ## Code Organization
 
