@@ -7,521 +7,358 @@
     <title>Hist-Fact: The Great Wall of China</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <style>
-        .player {
-            border-radius: 12px;
-            overflow: hidden;
-            z-index: 1;
-            height: 320px;
-            width: 480px;
-            margin: auto;
-        }
-
-        /* (the vertical ruler) */
-        .timeline5 {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        /* (the vertical ruler) */
-        .timeline5::after {
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: white;
-        }
-
-        /* Container around content */
-        .container5 {
-            padding: 10px 40px;
-            background-color: inherit;
-            width: 50%;
-            position: relative;
-        }
-
-        /* circles */
-        .container5::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            border: 4px solid teal;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-            right: -17px;
-            background-color: white;
-        }
-
-        /* container to the left */
-        .left5 {
-            left: 0;
-        }
-
-        /* container to the right */
-        .right5 {
-            left: 50%;
-        }
-
-        /* arrows to the left container (pointing right) */
-        .left5::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            right: 30px;
-            border: medium solid white;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-        }
-
-        /* arrows to the right container (pointing left) */
-        .right5::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            left: 30px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-        }
-
-        /* circle for containers on the right side */
-        .right5::after {
-            left: -16px;
-        }
-
-        /* content */
-        .content5 {
-            padding: 20px 30px;
-            border-radius: 6px;
-            color: black;
-            background-color: white;
-            position: relative;
-        }
-
-        /* Media queries */
-        @media screen and (max-width: 600px) {
-
-            /* Place the timelime to the left */
-            .timeline5::after {
-                left: 31px;
-            }
-
-            /* containers */
-            .container5 {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            /* arrows are pointing leftwards */
-            .container5::before {
-                left: 60px;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent white transparent transparent;
-                border: medium solid white;
-            }
-
-            /* circles are at the same spot */
-            .left5::after,
-            .right::after {
-                left: 15px;
-            }
-
-            /* right containers behave like the left ones */
-            .right5 {
-                left: 0%;
-            }
-        }
-
-
-        .container10 {
-        width: 60%;
-        margin: 2rem auto;
-        }
-
-        .gallery {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 5vw);
-        grid-gap: 1.5rem;
-        }
-
-        .gallery__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        }
-
-        .gallery__item--1 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
-
-        /** Alternative Syntax **/
-        /* grid-column: 1 / span 2;  */
-        /* grid-row: 1 / span 2; */
-        }
-
-        .gallery__item--2 {
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 3;
-
-        /** Alternative Syntax **/
-        /* grid-column: 3 / span 2;  */
-        /* grid-row: 1 / span 2; */
-        }
-
-        .gallery__item--3 {
-        grid-column-start: 5;
-        grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 6;
-
-        /** Alternative Syntax **/
-        /* grid-column: 5 / span 4;
-        grid-row: 1 / span 5; */
-        }
-
-        .gallery__item--4 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 6;
-
-        /** Alternative Syntax **/
-        /* grid-column: 1 / span 4;  */
-        /* grid-row: 3 / span 3; */
-        }
-
-        .gallery__item--5 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 6;
-        grid-row-end: 9;
-
-        /** Alternative Syntax **/
-        /* grid-column: 1 / span 4; */
-        /* grid-row: 6 / span 3; */
-        }
-
-        .gallery__item--6 {
-        grid-column-start: 5;
-        grid-column-end: 9;
-        grid-row-start: 6;
-        grid-row-end: 9;
-
-        /** Alternative Syntax **/
-        /* grid-column: 5 / span 4; */
-        /* grid-row: 6 / span 3; */
-        }
-
-    </style>
-
 </head>
 
 <body>
     <header>
-    
-    <nav>
 
-        <nav class="navbar">
-            <!-- LOGO -->
-            <div class="logo"><b>Hist-Fact: The Great Wall Of China</b></div>
+        <nav>
 
-            <!-- NAVIGATION MENU -->
-            <div class="nav-links">
+            <nav class="navbar">
+                <!-- LOGO -->
+                <div class="logo"><b>Hist-Fact: The Great Wall Of China</b></div>
 
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" >
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <!-- NAVIGATION MENU -->
+                <div class="nav-links">
 
-                <!-- NAVIGATION MENUS -->
-                <ul class="menu">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle">
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                    <li><a href="#introduction">Home</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
-                    <li class="services">
-                        <a href="#evidence-info">Evidence Info</a>
+                    <!-- NAVIGATION MENUS -->
+                    <ul class="menu">
 
-                        <!-- DROPDOWN MENU -->
-                        <ul class="dropdown">
-                            <li><a href="#purpose">Purpose</a></li>
-                            <li><a href="#construction">Construction</a></li>
-                            <li><a href="#defense">Defense</a></li>
-                            <li><a href="#military">Military</a></li>
-                            <li><a href="#culture">Culture</a></li>
-                        </ul>
+                        <li><a href="#introduction">Home</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li class="services">
+                            <a href="#evidence-info">Evidence Info</a>
 
-                    </li>
+                            <!-- DROPDOWN MENU -->
+                            <ul class="dropdown">
+                                <li><a href="#purpose">Purpose</a></li>
+                                <li><a href="#construction">Construction</a></li>
+                                <li><a href="#defense">Defense</a></li>
+                                <li><a href="#military">Military</a></li>
+                                <li><a href="#culture">Culture</a></li>
+                            </ul>
 
-                    <li><a href="#photosvideos">Media</a></li>
-                </ul>
+                        </li>
 
-            </div>
+                        <li><a href="#photosvideos">Media</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+
         </nav>
-
-    </nav>
 
     </header>
 
-        <main>
-            <br><br>
-            <section id="introduction">
-                <br><br>
+    <main>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <div id="introduction">
+            <span class="spacing"></span>
+            <span class="spacing"></span>
 
-                <div class="container1">
-                    <div class="image1_container">
-                        <img src="assets/img/china_wall.jpg" alt="Illustration Of The Great Wall Of China"
-                             class="image1">
-                    </div>
-                    <div class="text1">
-                        <p>Did you know that the Great Wall of China, one of the world's most awe-inspiring structures,
-                            wasn't created in a day?
-                            This magnificent marvel of human engineering and perseverance was a labor of love
-                            constructed and expanded over several
-                            centuries by different dynasties and rulers.<br><br>
+            <div class="container1">
+                <div class="image1_container">
+                    <img src="assets/img/china_wall.jpg" alt="Illustration Of The Great Wall Of China" class="image1">
+                </div>
+                <div class="text1">
+                    <p>Did you know that the Great Wall of China, one of the world's most awe-inspiring structures,
+                        wasn't created in a day?
+                        This magnificent marvel of human engineering and perseverance was a labor of love
+                        constructed and expanded over several
+                        centuries by different dynasties and rulers.
+                    <span class="spacing"></span>
+                    <span class="spacing"></span>
 
-                            As you explore the Great Wall, from the rugged mountains in the west to the picturesque
-                            landscapes in the east, you'll
-                            witness breathtaking vistas, fortified watchtowers, and intricate defensive systems. It's an
-                            experience that immerses
-                            you in a rich tapestry of history, culture, and natural beauty.<br><br>
+                    As you explore the Great Wall, from the rugged mountains in the west to the picturesque
+                    landscapes in the east, you'll
+                    witness breathtaking vistas, fortified watchtowers, and intricate defensive systems. It's an
+                    experience that immerses
+                    you in a rich tapestry of history, culture, and natural beauty.<span class="spacing"></span>
+                    <span class="spacing"></span>
 
-                            <b>Through captivating images, immersive videos, and fascinating historical accounts, our
-                                website aims to transport you to
-                                this iconic wonder of the world. Join us on a virtual journey through time and explore
-                                the Great Wall of China like
-                                never before.</b><br><br>
+                    <b>Through captivating images, immersive videos, and fascinating historical accounts, our
+                        website aims to transport you to
+                        this iconic wonder of the world. Join us on a virtual journey through time and explore
+                        the Great Wall of China like
+                        never before.</b>
+                    <span class="spacing"></span>
+                    <span class="spacing"></span>
 
-                            Remember, behind every stone and every brick of this awe-inspiring structure lies a story
-                            waiting to be discovered.
-                            Come, embark on an adventure through centuries of history, and let the Great Wall of China
-                            reveal its secrets to you.
-                        </p>
+                    Remember, behind every stone and every brick of this awe-inspiring structure lies a story
+                    waiting to be discovered.
+                    Come, embark on an adventure through centuries of history, and let the Great Wall of China
+                    reveal its secrets to you.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <hr>
+
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+
+        <!-- Attributes: https://www.w3schools.com/howto/howto_css_timeline.asp -->
+        <section id="timeline">
+            <h2 style="text-align:center;">Timeline of Events</h2>
+            <span class="spacing"></span>
+            <span class="spacing"></span>
+
+            <div class="timeline5">
+                <div class="container5 left5">
+                    <div class="content5">
+                        <h2>Early Construction (7th century BC)</h2>
+                        <p>- The earliest walls were built during this period to protect China's northern borders
+                            from invasions by nomadic tribes.</p>
+                        <p>- Construction of rudimentary walls and fortifications by regional states such as Chu,
+                            Yan, and Zhao.</p>
                     </div>
                 </div>
-
-            </section>
-
-            <br><br><br><br>
-            <hr><br><br><br><br>
-            <!-- Attributes: https://www.w3schools.com/howto/howto_css_timeline.asp -->
-            <section id="timeline">
-                <h2 style="text-align:center;">Timeline of Events</h2>
-                <br><br>
-
-                <div class="timeline5">
-                    <div class="container5 left5">
-                        <div class="content5">
-                            <h2>Early Construction (7th century BC)</h2>
-                            <p>- The earliest walls were built during this period to protect China's northern borders
-                                from invasions by nomadic tribes.</p>
-                            <p>- Construction of rudimentary walls and fortifications by regional states such as Chu,
-                                Yan, and Zhao.</p>
-                        </div>
-                    </div>
-                    <div class="container5 right5">
-                        <div class="content5">
-                            <h2>Qin Dynasty (221-206 BC)</h2>
-                            <p>- Emperor Qin Shi Huang aimed to unify China and ordered the connection of existing walls
-                                into a cohesive defensive system.</p>
-                            <p>- Construction of initial walls and watchtowers, laying the foundation for the future
-                                development of the Great Wall.</p>
-                        </div>
-                    </div>
-                    <div class="container5 left5">
-                        <div class="content5">
-                            <h2>Han Dynasty (206 BC - 220 AD)</h2>
-                            <p>- The Han Dynasty focused on fortifying and expanding the Great Wall to protect the Silk
-                                Road trade routes and defend against Xiongnu raids.</p>
-                            <p>- Major renovations, extension of the walls towards the west, and strengthening of
-                                defensive capabilities.</p>
-                        </div>
-                    </div>
-                    <div class="container5 right5">
-                        <div class="content5">
-                            <h2>Ming Dynasty (1368-1644 AD)</h2>
-                            <p>- The most well-known and significant phase of Great Wall construction, characterized by
-                                extensive rebuilding, fortification, and expansion.</p>
-                            <p>- Ming emperors, such as Emperor Yongle and Emperor Wanli, oversaw the construction of
-                                iconic sections like Badaling and Juyongguan.</p>
-                        </div>
-                    </div>
-                    <div class="container5 left5">
-                        <div class="content5">
-                            <h2>Jin Dynasty (1115-1234 AD)</h2>
-                            <p>- The Jin Dynasty, a non-Han Chinese dynasty ruling in the north, contributed to the
-                                Great Wall's expansion and defense against Mongol invasions.</p>
-                            <p>- Reinforcement and extension of the wall to counter the Mongol threat.</p>
-                        </div>
-                    </div>
-                    <div class="container5 right5">
-                        <div class="content5">
-                            <h2>Ming-Qing Transition (17th century AD)</h2>
-                            <p>- During the Ming-Qing transition, the Great Wall played a role in the defense against
-                                the Manchu-led Qing Dynasty.</p>
-                            <p>- The wall's fortifications were adapted and reinforced to withstand new military
-                                strategies and technologies.</p>
-                        </div>
+                <div class="container5 right5">
+                    <div class="content5">
+                        <h2>Qin Dynasty (221-206 BC)</h2>
+                        <p>- Emperor Qin Shi Huang aimed to unify China and ordered the connection of existing walls
+                            into a cohesive defensive system.</p>
+                        <p>- Construction of initial walls and watchtowers, laying the foundation for the future
+                            development of the Great Wall.</p>
                     </div>
                 </div>
-
-            </section>
-
-            <br><br><br><br>
-            <hr><br><br><br><br>
-            <section id="evidence-info">
-                <h2 style="text-align:center">Evidence Based Information</h2>
-                <br><br>
-                <div class="center__text">
-                    <h4 id="purpose" style="text-align:center;">- Purpose Of The Great Wall -</h4><br>
-                    <div class="player">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/m68zyXyeYG0"
-                            title="YouTube video player" class="frameborder_zero"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                <div class="container5 left5">
+                    <div class="content5">
+                        <h2>Han Dynasty (206 BC - 220 AD)</h2>
+                        <p>- The Han Dynasty focused on fortifying and expanding the Great Wall to protect the Silk
+                            Road trade routes and defend against Xiongnu raids.</p>
+                        <p>- Major renovations, extension of the walls towards the west, and strengthening of
+                            defensive capabilities.</p>
                     </div>
-                    <br>
-                    <p>The Great Wall served as a formidable defensive fortification,<br>aiming to protect ancient China
-                        from invasions by nomadic
-                        tribes and rival states.</p>
-                    <br>
-                    <p>Historical records, accounts from ancient Chinese sources and diplomatic correspondence serve as
-                        evidence.</p>
-
-                    <br><br><br>
-                    <h4 id="construction" style="text-align:center;">- Construction Techniques -</h4><br>
-                    <div class="player">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Tka_a3jdSHQ"
-                            title="YouTube video player" class="frameborder_zero"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                </div>
+                <div class="container5 right5">
+                    <div class="content5">
+                        <h2>Ming Dynasty (1368-1644 AD)</h2>
+                        <p>- The most well-known and significant phase of Great Wall construction, characterized by
+                            extensive rebuilding, fortification, and expansion.</p>
+                        <p>- Ming emperors, such as Emperor Yongle and Emperor Wanli, oversaw the construction of
+                            iconic sections like Badaling and Juyongguan.</p>
                     </div>
-                    <br>
-                    <p>The construction of the Great Wall required advanced engineering techniques and skilled laborers.
-                    </p>
-                    <br>
-                    <p>Archaeological findings reveal the use of various construction methods,<br>such as rammed earth,
-                        bricks, and stone blocks,
-                        depending on the availability of resources and the technological advancements of each dynasty.
-                    </p>
-
-                    <br><br><br>
-                    <h4 id="defense" style="text-align:center;">- Defensive Strategies -</h4><br>
-                    <div class="player">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RmaVP1n3Ogk"
-                            title="YouTube video player" class="frameborder_zero"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                </div>
+                <div class="container5 left5">
+                    <div class="content5">
+                        <h2>Jin Dynasty (1115-1234 AD)</h2>
+                        <p>- The Jin Dynasty, a non-Han Chinese dynasty ruling in the north, contributed to the
+                            Great Wall's expansion and defense against Mongol invasions.</p>
+                        <p>- Reinforcement and extension of the wall to counter the Mongol threat.</p>
                     </div>
-                    <br>
-                    <p>The Great Wall incorporated several defensive strategies to deter and repel potential invaders.
-                    </p>
-                    <br>
-                    <p>Historical documents and archaeological studies suggest the presence of watchtowers, beacon
-                        towers, garrisons,<br> and
-                        signaling systems along the wall, enabling early warnings, communication, and coordinated
-                        defense efforts.</p>
+                </div>
+                <div class="container5 right5">
+                    <div class="content5">
+                        <h2>Ming-Qing Transition (17th century AD)</h2>
+                        <p>- During the Ming-Qing transition, the Great Wall played a role in the defense against
+                            the Manchu-led Qing Dynasty.</p>
+                        <p>- The wall's fortifications were adapted and reinforced to withstand new military
+                            strategies and technologies.</p>
+                    </div>
+                </div>
+            </div>
 
-                    <br><br><br>
-                    <h4 id="military" style="text-align:center;">- Impact on Military Defense -</h4><br>
-                    <div class="player">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i8aZdwNlSEI" title="YouTube video player"
+        </section>
+
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <hr>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <section id="evidence-info">
+            <h2 style="text-align:center">Evidence Based Information</h2>
+            <span class="spacing"></span>
+            <span class="spacing"></span>
+            <div class="center__text">
+                <h4 id="purpose" style="text-align:center;">- Purpose Of The Great Wall -</h4>
+                <span class="spacing"></span>
+                <div class="player">
+                    <iframe src="https://www.youtube.com/embed/m68zyXyeYG0" title="YouTube video player"
                         class="frameborder_zero"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
-                    </div>
-                    <br>
-                    <p>The Great Wall played a crucial role in ancient China's military defense and strategic planning.</p>
-                    <br>
-                    <p>Analysis of historical battles, military campaigns, and the wall's geographical positioning indicate its effectiveness<br> in slowing down enemy advances, providing strategic advantages, and serving as a deterrent against potential invaders.</p>
-
-                    <br><br><br>
-                    <h4 id="culture" style="text-align:center;">- Cultural Identity and Symbolism -</h4><br>
-                    <div class="player">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pVXINihe6I8" title="YouTube video player"
-                            class="frameborder_zero"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                    </div>
-                    <br>
-                    <p>The Great Wall holds significant cultural and symbolic value for China and its people.</p>
-                    <br>
-                    <p>Cultural references in literature, poetry, and artwork, as well as its status as a UNESCO World Heritage site, <br>highlight
-                    its symbolic importance as a national icon, representing resilience, unity, and the rich history of Chinese
-                    civilization.</p>
-
-
                 </div>
-            </section>
+                <span class="spacing"></span>
+                <p>The Great Wall served as a formidable defensive fortification,
+                <span class="spacing"></span>aiming to protect ancient China
+                from invasions by nomadic
+                tribes and rival states.</p>
+                <span class="spacing"></span>
+                <p>Historical records, accounts from ancient Chinese sources and diplomatic correspondence serve as
+                    evidence.</p>
+
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <h4 id="construction" style="text-align:center;">- Construction Techniques -</h4>
+                <span class="spacing"></span>
+                <div class="player">
+                    <iframe src="https://www.youtube.com/embed/Tka_a3jdSHQ" title="YouTube video player"
+                        class="frameborder_zero"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <span class="spacing"></span>
+                <p>The construction of the Great Wall required advanced engineering techniques and skilled laborers.
+                </p>
+                <span class="spacing"></span>
+                <p>Archaeological findings reveal the use of various construction methods,
+                <span class="spacing"></span>such as rammed earth,
+                bricks, and stone blocks,
+                depending on the availability of resources and the technological advancements of each dynasty.
+                </p>
+
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <h4 id="defense" style="text-align:center;">- Defensive Strategies -</h4>
+                <span class="spacing"></span>
+                <div class="player">
+                    <iframe src="https://www.youtube.com/embed/RmaVP1n3Ogk" title="YouTube video player"
+                        class="frameborder_zero"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <span class="spacing"></span>
+                <p>The Great Wall incorporated several defensive strategies to deter and repel potential invaders.
+                </p>
+                <span class="spacing"></span>
+                <p>Historical documents and archaeological studies suggest the presence of watchtowers, beacon
+                    towers, garrisons,
+                <span class="spacing"></span> and
+                signaling systems along the wall, enabling early warnings, communication, and coordinated
+                defense efforts.</p>
+
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <h4 id="military" style="text-align:center;">- Impact on Military Defense -</h4>
+                <span class="spacing"></span>
+                <div class="player">
+                    <iframe src="https://www.youtube.com/embed/i8aZdwNlSEI" title="YouTube video player"
+                        class="frameborder_zero"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <span class="spacing"></span>
+                <p>The Great Wall played a crucial role in ancient China's military defense and strategic planning.</p>
+                <span class="spacing"></span>
+                <p>Analysis of historical battles, military campaigns, and the wall's geographical positioning indicate
+                    its effectiveness
+                <span class="spacing"></span> in slowing down enemy advances, providing strategic advantages, and serving
+                as a deterrent against potential invaders.</p>
+
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <span class="spacing"></span>
+                <h4 id="culture" style="text-align:center;">- Cultural Identity and Symbolism -</h4>
+                <span class="spacing"></span>
+                <div class="player">
+                    <iframe src="https://www.youtube.com/embed/pVXINihe6I8" title="YouTube video player"
+                        class="frameborder_zero"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <span class="spacing"></span>
+                <p>The Great Wall holds significant cultural and symbolic value for China and its people.</p>
+                <span class="spacing"></span>
+                <p>Cultural references in literature, poetry, and artwork, as well as its status as a UNESCO World
+                    Heritage site,
+                <span class="spacing"></span>highlight
+                its symbolic importance as a national icon, representing resilience, unity, and the rich history of
+                Chinese
+                civilization.</p>
 
 
-            <br><br><br><br>
-            <hr><br><br><br><br>
-            <section id="photosvideos">
+            </div>
+        </section>
+
+
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <hr>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <section id="photosvideos">
             <h2 style="text-align:center">Media</h2>
-            <br>
+            <span class="spacing"></span>
 
             <div class="container10">
-            <div class="gallery">
-            <figure class="gallery__item gallery__item--1">
-            <img src="assets/img/great_wall_drone_shot.webp" alt="Photo of the great wall of China" class="gallery__img">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-            <img src="assets/img/great_wall_side.jpg" alt="Photo of the great wall of China" class="gallery__img">
-            </figure>
-            <figure class="gallery__item gallery__item--3">
-            <img src="assets/img/great_wall_snowing.jpg" alt="Map of the great wall of China" class="gallery__img">
-            </figure>
-            <figure class="gallery__item gallery__item--4">
-            <img src="assets/img/great_wall_with_crowd.jpg" alt="Great Wall Of China Covered in Snow" class="gallery__img">
-            </figure>
-            <figure class="gallery__item gallery__item--5">
-                <img src="assets/img/great_wall_with_money.jpg" alt="Great Wall of China's photo" class="gallery__img">
-            </figure>
-            <figure class="gallery__item gallery__item--6">
-                <img src="assets/img/reat_wall_map.jpg" alt="Photo of the great wall of China" class="gallery__img">
-            </figure>
-            </div>
+                <div class="gallery">
+                    <figure class="gallery__item gallery__item--1">
+                        <img src="assets/img/great_wall_drone_shot.webp" alt="Photo of the great wall of China"
+                            class="gallery__img">
+                    </figure>
+                    <figure class="gallery__item gallery__item--2">
+                        <img src="assets/img/great_wall_side.jpg" alt="Photo of the great wall of China"
+                            class="gallery__img">
+                    </figure>
+                    <figure class="gallery__item gallery__item--3">
+                        <img src="assets/img/great_wall_snowing.jpg" alt="Map of the great wall of China"
+                            class="gallery__img">
+                    </figure>
+                    <figure class="gallery__item gallery__item--4">
+                        <img src="assets/img/great_wall_with_crowd.jpg" alt="Great Wall Of China Covered in Snow"
+                            class="gallery__img">
+                    </figure>
+                    <figure class="gallery__item gallery__item--5">
+                        <img src="assets/img/great_wall_with_money.jpg" alt="Great Wall of China's photo"
+                            class="gallery__img">
+                    </figure>
+                    <figure class="gallery__item gallery__item--6">
+                        <img src="assets/img/reat_wall_map.jpg" alt="Photo of the great wall of China"
+                            class="gallery__img">
+                    </figure>
+                </div>
             </div>
 
             <div class="center__text">
                 <div class="player">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EotbKqZmBuY" title="YouTube video player"
+                    <iframe src="https://www.youtube.com/embed/EotbKqZmBuY" title="YouTube video player"
                         class="frameborder_zero"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div></div>
-
-            </section>
-
-            <br><br><br><br>
-            <hr>
-
-        </main>
-
-        <footer>
-
-            <div>
-                <p class="footerright"><b>&copy; 2023 | Hist-Fact: The Great Wall of China</b></p>
+                        allowfullscreen></iframe>
+                </div>
             </div>
-        </footer>
+
+        </section>
+
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <span class="spacing"></span>
+        <hr>
+
+    </main>
+
+    <footer>
+
+        <div>
+            <p class="footerright"><b>&copy; 2023 | Hist-Fact: The Great Wall of China</b></p>
+        </div>
+    </footer>
 </body>
 
 </html>
